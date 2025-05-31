@@ -1,0 +1,136 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Safety Foundations - AI Safety Research</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G-F605BZW00S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-F605BZW00S');
+    </script>
+</head>
+<body>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>AI Safety Research Breakdowns</h1>
+                <p>Accessible explanations of recent papers, visualization of technical concepts, and implications of new findings in AI safety.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <section>
+                <h2>Understanding Current Research</h2>
+                <p>The field of AI safety is dynamic, with new research papers and findings emerging regularly. This section aims to break down some of these technical concepts and papers into more understandable summaries for students and enthusiasts. Keeping up with research is key to understanding the evolving landscape of AI safety challenges and solutions.</p>
+                <p><em>Note: This section will be updated periodically with new research summaries.</em></p>
+            </section>
+
+            <section class="research-papers">
+                <h2>Featured Research Summaries</h2>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Reinforcement Learning from Human Feedback (RLHF)</h3>
+                        <p><strong>Paper(s):</strong> Deep Reinforcement Learning from Human Preferences (OpenAI, 2017) and others.</p>
+                        <p><strong>Core Idea:</strong> RLHF is a technique to align language models (and other AI systems) more closely with human intentions. Instead of just predicting the next word, models are fine-tuned using feedback from human evaluators who rank different model outputs based on quality, helpfulness, and harmlessness. This feedback is used to train a "reward model" that then guides the AI's behavior through reinforcement learning.</p>
+                        <p><strong>Why it's important for safety:</strong> RLHF has been a key factor in making large language models like ChatGPT and Claude more helpful and less prone to generating harmful or nonsensical content. It's a practical approach to value learning.</p>
+                        <p><strong>Simplified Analogy:</strong> Imagine teaching a dog a new trick. Instead of just giving it a treat when it does something vaguely right (standard RL), you have multiple people watch the dog try various things and they all say which attempt was "best," "second best," etc. The dog then learns from this ranked feedback.</p>
+                        <p><strong>Limitations/Challenges:</strong> Scalability of human feedback, potential for reward model hacking (AI finding ways to get high reward without truly being helpful), and ensuring diverse human preferences are captured.</p>
+                        <a href="https://openai.com/research/learning-from-human-preferences" class="btn-secondary" target="_blank">Read more (OpenAI)</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Constitutional AI: Harmlessness from AI Feedback</h3>
+                        <p><strong>Paper(s):</strong> Constitutional AI: Harmlessness from AI Feedback (Anthropic, 2022)</p>
+                        <p><strong>Core Idea:</strong> This approach aims to make AI models harmless and helpful without relying extensively on human-generated labels of harmful content. Instead, the AI is given a set of principles or rules (a "constitution") to follow. The AI then critiques and revises its own responses based on these principles, with another AI model helping to supervise this process. The goal is to make the AI self-correct towards safer behavior.</p>
+                        <p><strong>Why it's important for safety:</strong> It offers a way to scale up safety training and reduce the burden on human labelers, especially for identifying novel types of harmful content. It also makes the AI's values more explicit through the constitution.</p>
+                        <p><strong>Simplified Analogy:</strong> Imagine a student writing an essay. Instead of only a teacher giving feedback, the student is first given a list of rules (e.g., "be respectful," "don't make threats"). The student then writes a draft, critiques it against the rules, and revises it. A teaching assistant (another AI) helps ensure this self-correction is done properly.</p>
+                        <p><strong>Limitations/Challenges:</strong> Crafting a comprehensive and effective constitution is difficult, and the AI's interpretation of the principles might not always align with human intent.</p>
+                        <a href="https://www.anthropic.com/research/constitutional-ai" class="btn-secondary" target="_blank">Read more (Anthropic)</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Discovering Latent Knowledge in Language Models Without Supervision</h3>
+                        <p><strong>Paper(s):</strong> Discovering Latent Knowledge in Language Models Without Supervision (Burns et al., 2022 - often related to "Truth Serum" work)</p>
+                        <p><strong>Core Idea:</strong> This line of research explores whether we can identify when a language model "knows" something is true, even if it's not explicitly stating it or if it's trying to be deceptive. The idea is that the internal activations or representations within the model might consistently differ when processing true versus false statements, even if the outward text is similar. By finding these consistent internal "signatures" of truth, we might be able to elicit more honest answers from models.</p>
+                        <p><strong>Why it's important for safety:</strong> If successful, this could help in detecting when models are "hallucinating" (making things up) or being deceptively misaligned. It's a step towards understanding the internal states of models, which is key for advanced interpretability and ensuring honesty.</p>
+                        <p><strong>Simplified Analogy:</strong> Think of it like a polygraph test for language models, but instead of measuring physiological responses, researchers look for consistent patterns in the AI's "brain activity" (internal model states) that correlate with truthfulness, independent of what the AI is actually saying.</p>
+                        <p><strong>Limitations/Challenges:</strong> This is still very much a research area. It's unclear how robust or generalizable these techniques are, especially for highly complex models or subtle forms of deception.</p>
+                         <a href="https://arxiv.org/abs/2212.03827" class="btn-secondary" target="_blank">Read the paper (arXiv)</a>
+                    </div>
+                </div>
+
+                <!-- Add more research summaries here as cards -->
+
+            </section>
+
+            <section>
+                <h2>Visualizing Technical Concepts</h2>
+                <p><em>(This section is under development. We plan to add visualizations for concepts like neural network layers, decision trees, adversarial attacks, etc., to make them easier to grasp.)</em></p>
+                <!-- Placeholder for future visualizations -->
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4>Concept: Neural Network (Coming Soon)</h4>
+                            <p>A brief explanation and a simplified diagram of a neural network will be here.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h4>Concept: Adversarial Example (Coming Soon)</h4>
+                            <p>An illustration of how a small perturbation can fool an image classifier will be here.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Staying Updated</h2>
+                <p>The field of AI safety research is fast-moving. Here are some ways to stay updated:</p>
+                <ul>
+                    <li>Follow key research labs: OpenAI, DeepMind, Anthropic, MIRI, FHI, CAIS, etc.</li>
+                    <li>Read blogs and newsletters from these organizations.</li>
+                    <li>Use arXiv for pre-print papers in cs.AI, cs.LG, cs.CY (Ethics & Society).</li>
+                    <li>Engage with communities like the <a href="https://www.alignmentforum.org" target="_blank">Alignment Forum</a>.</li>
+                    <li>Follow prominent AI safety researchers on social media.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Further Learning</h2>
+                <ul>
+                    <li><a href="intro-to-ai-safety">Introduction to AI Safety</a></li>
+                    <li><a href="alignment-challenges">The Alignment Problem</a></li>
+                    <li><a href="interpretability">Interpretability in AI</a></li>
+                    <li><a href="../resources/intermediate-reading">Intermediate Reading List</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Safety Foundations. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../pages/about">About</a>
+                <a href="../pages/learn">Learn</a>
+                <a href="../pages/resources">Resources</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

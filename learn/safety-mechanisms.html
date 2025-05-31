@@ -1,0 +1,166 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Safety Foundations - Safety Mechanisms in AI</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G-F605BZW00S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-F605BZW00S');
+    </script>
+</head>
+<body>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>AI Safety Mechanisms</h1>
+                <p>Techniques and strategies for building safer and more reliable AI systems.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <section>
+                <h2>Introduction to AI Safety Mechanisms</h2>
+                <p>AI safety mechanisms are specific techniques, design principles, and processes aimed at preventing AI systems from causing harm and ensuring they operate as intended. These mechanisms are crucial for addressing the risks associated with AI, from current systems to potentially highly advanced future AI. They complement broader governance and alignment efforts by providing concrete tools and methods for engineers and researchers.</p>
+                <p>No single mechanism is a silver bullet; often, a combination of approaches is needed to build robustly safe AI.</p>
+            </section>
+
+            <section>
+                <h2>Key Safety Mechanisms and Techniques</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Robustness Testing & Adversarial Training</h3>
+                            <p><strong>Robustness</strong> refers to an AI's ability to maintain performance under unexpected or challenging conditions. This includes:</p>
+                            <ul>
+                                <li><strong>Distributional Shift:</strong> Performing reliably when input data differs from training data.</li>
+                                <li><strong>Adversarial Attacks:</strong> Resisting small, crafted input changes designed to fool the model.</li>
+                            </ul>
+                            <p><strong>Adversarial Training</strong> involves explicitly training models on adversarial examples to make them more resilient.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Interpretability and Explainability (XAI)</h3>
+                            <p>As discussed in its own section, making AI decision-making processes understandable to humans. This allows for:</p>
+                            <ul>
+                                <li>Debugging and identifying flaws.</li>
+                                <li>Verifying alignment with intended goals.</li>
+                                <li>Building trust and accountability.</li>
+                            </ul>
+                            <a href="interpretability" class="btn-secondary">Learn more about Interpretability</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Human Oversight & Control (Corrigibility)</h3>
+                            <p>Designing systems that allow for meaningful human intervention and control:</p>
+                            <ul>
+                                <li><strong>"Off-switches" or Tripwires:</strong> Mechanisms to safely halt or constrain an AI if it behaves dangerously.</li>
+                                <li><strong>Corrigibility:</strong> Ensuring AI systems are amenable to being corrected or shut down without resistance.</li>
+                                <li><strong>Human-in-the-loop systems:</strong> Requiring human approval for critical decisions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Formal Verification</h3>
+                            <p>Mathematically proving that an AI system satisfies certain properties or will not enter undesirable states, at least under specific assumptions. This is challenging for complex models but offers strong safety assurances where applicable.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Reward Modeling & Value Learning</h3>
+                            <p>Crucial for alignment, these techniques focus on accurately specifying AI goals:</p>
+                            <ul>
+                                <li><strong>Careful Reward Design:</strong> Crafting reward functions in reinforcement learning that avoid loopholes or unintended behaviors.</li>
+                                <li><strong>Reinforcement Learning from Human Feedback (RLHF):</strong> Using human preferences to fine-tune models and align them with desired behaviors.</li>
+                                <li><strong>Imitation Learning:</strong> Training AI by observing and mimicking human experts.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Safe Exploration</h3>
+                            <p>Allowing AI agents to learn in new environments without causing irreversible harm during the exploration phase. This might involve simulated environments, reversible actions, or safety constraints that limit potentially dangerous behaviors during learning.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Sandboxing & Containment</h3>
+                            <p>Restricting an AI system's access to the broader world, especially during testing or for highly capable systems. This can limit the potential impact of unexpected behavior by confining the AI to a controlled environment.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Red Teaming</h3>
+                            <p>A process where a dedicated team tries to find flaws and vulnerabilities in an AI system, essentially playing the role of an adversary to uncover safety risks before deployment. This helps identify unexpected failure modes.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Monitoring and Anomaly Detection</h3>
+                            <p>Continuously monitoring AI systems in deployment to detect unusual behavior, performance degradation, or signs of misalignment. Anomaly detection can trigger alerts for human review or automated safety responses.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Ethical Guidelines and Review Boards</h3>
+                            <p>Implementing organizational processes, such as ethics committees or review boards, to assess the potential risks and societal impacts of AI projects before and during development.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Challenges in Implementing Safety Mechanisms</h2>
+                <ul>
+                    <li><strong>Scalability:</strong> Some safety mechanisms that work for smaller systems may not scale effectively to very large or highly autonomous AI.</li>
+                    <li><strong>Performance Costs:</strong> Certain safety measures might slightly reduce an AI's performance or efficiency, requiring a trade-off.</li>
+                    <li><strong>Comprehensive Coverage:</strong> It's difficult to anticipate all possible failure modes, making it hard to ensure safety mechanisms cover every eventuality.</li>
+                    <li><strong>Adaptive Adversaries:</strong> For security-related mechanisms, there's an ongoing challenge as attackers develop new ways to bypass defenses.</li>
+                    <li><strong>Human Factors:</strong> Effective human oversight requires careful design of interfaces and training for human operators.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>The Layered Approach to Safety</h2>
+                <p>Effective AI safety often relies on a "defense in depth" or layered approach. This means using multiple safety mechanisms in combination, so that if one fails, others can still prevent harm. This is similar to safety engineering in other fields like aviation or nuclear power.</p>
+            </section>
+
+            <section>
+                <h2>Further Learning</h2>
+                <p>Understanding these mechanisms is key to appreciating the technical side of AI safety. Explore further:</p>
+                <ul>
+                    <li><a href="intro-to-ai-safety">Introduction to AI Safety</a></li>
+                    <li><a href="alignment-challenges">The Alignment Problem</a></li>
+                    <li><a href="interpretability">Interpretability in AI</a></li>
+                    <li><a href="../resources/glossary">AI Safety Glossary</a></li>
+                    <li><a href="../resources/intermediate-reading">Intermediate Reading List</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Safety Foundations. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../pages/about">About</a>
+                <a href="../pages/learn">Learn</a>
+                <a href="../pages/resources">Resources</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

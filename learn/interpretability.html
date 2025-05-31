@@ -1,0 +1,125 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Safety Foundations - Interpretability in AI</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G-F605BZW00S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-F605BZW00S');
+    </script>
+</head>
+<body>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Interpretability in AI</h1>
+                <p>Understanding how and why AI systems make decisions.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <section>
+                <h2>What is AI Interpretability?</h2>
+                <p>AI interpretability, often referred to as Explainable AI (XAI), is the ability for humans to understand the reasoning behind an AI system's decisions or predictions. As AI models, particularly deep learning networks, become more complex, their internal workings can resemble "black boxes." Interpretability aims to open up these black boxes, providing insights into how inputs are processed and outputs are generated.</p>
+                <p>A model is considered interpretable if a human can, with relative ease, grasp how it arrives at a specific outcome. This doesn't necessarily mean understanding every single calculation, but rather the key factors and logic driving the AI's behavior.</p>
+            </section>
+
+            <section>
+                <h2>Why is Interpretability Important for AI Safety?</h2>
+                <p>Interpretability is a cornerstone of developing safe and trustworthy AI systems for several reasons:</p>
+                <ul>
+                    <li><strong>Debugging and Error Analysis:</strong> If an AI system makes a mistake, interpretability helps us understand why it failed and how to fix it. Without this insight, correcting errors in complex models can be incredibly difficult.</li>
+                    <li><strong>Bias Detection and Fairness:</strong> AI models can inadvertently learn and perpetuate biases present in their training data. Interpretability methods can help identify if a model is making decisions based on sensitive attributes (like race or gender) and allow for mitigation.</li>
+                    <li><strong>Building Trust:</strong> For AI to be widely adopted, especially in critical applications like healthcare or finance, users need to trust its decisions. Understanding how an AI works fosters this trust.</li>
+                    <li><strong>Ensuring Robustness:</strong> Interpretability can reveal if a model is relying on spurious correlations or irrelevant features, which might make it perform poorly in new or slightly different situations. This helps in building more robust models.</li>
+                    <li><strong>Accountability and Compliance:</strong> In many domains, there are legal or regulatory requirements for decisions to be explainable (e.g., GDPR's "right to explanation"). Interpretability is key to meeting these standards and establishing accountability.</li>
+                    <li><strong>Alignment Verification:</strong> For advanced AI systems, interpretability is crucial for verifying that the AI's learned objectives and reasoning processes are truly aligned with human intentions.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Methods of Interpretability</h2>
+                <p>There are various techniques to make AI models more interpretable. These can be broadly categorized:</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Intrinsic Interpretability (Transparent Models)</h3>
+                            <p>Some models are inherently easier to understand due to their simpler structure. Examples include:</p>
+                            <ul>
+                                <li><strong>Linear Regression:</strong> Coefficients directly show the impact of each feature.</li>
+                                <li><strong>Decision Trees:</strong> The decision path is easily visualized and followed.</li>
+                                <li><strong>Rule-Based Systems:</strong> Decisions are made based on explicit "if-then" rules.</li>
+                            </ul>
+                            <p>The trade-off is that these models might not achieve the same level of performance as more complex ones on certain tasks.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Post-hoc Interpretability (Explaining Black Boxes)</h3>
+                            <p>These methods are applied after a complex model (like a neural network) has been trained. They aim to approximate or reveal parts of the model's behavior without changing its internal structure.</p>
+                            <ul>
+                                <li><strong>Feature Importance:</strong> Techniques like SHAP (SHapley Additive exPlanations) or LIME (Local Interpretable Model-agnostic Explanations) assign scores to input features based on their contribution to a specific prediction.</li>
+                                <li><strong>Saliency Maps:</strong> For image models, these highlight which pixels in an input image were most influential for a given classification.</li>
+                                <li><strong>Model Distillation:</strong> Training a simpler, interpretable model (a "student") to mimic the behavior of a complex black-box model (a "teacher").</li>
+                                <li><strong>Counterfactual Explanations:</strong> Describing the smallest change to the input that would alter the model's prediction (e.g., "Your loan was denied. If your income had been $5,000 higher, it would have been approved.").</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Challenges in AI Interpretability</h2>
+                <p>While crucial, achieving full and meaningful interpretability faces several challenges:</p>
+                <ul>
+                    <li><strong>Performance vs. Interpretability Trade-off:</strong> Often, the highest-performing models (e.g., deep neural networks) are the least interpretable. Simplifying models for interpretability might come at the cost of accuracy.</li>
+                    <li><strong>Complexity of Models:</strong> The sheer number of parameters and non-linear interactions in modern AI makes them inherently difficult to understand fully.</li>
+                    <li><strong>Human Cognitive Limits:</strong> Even if we could extract all the information from a model, humans have limited capacity to process and understand highly complex explanations.</li>
+                    <li><strong>Faithfulness of Explanations:</strong> Post-hoc explanation methods provide approximations of the model's behavior. There's a risk that these explanations might not perfectly reflect the true reasoning, or could even be misleading.</li>
+                    <li><strong>Scope of Explanation:</strong> Explanations can be local (explaining a single prediction) or global (explaining the model's overall behavior). Global interpretability is much harder to achieve.</li>
+                    <li><strong>Audience for Explanation:</strong> The type of explanation needed varies depending on who is asking (e.g., a developer, a user, a regulator).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>The Future of Interpretability</h2>
+                <p>Interpretability is an active area of research in AI safety. Future work aims to develop more powerful and faithful explanation techniques, create inherently interpretable yet high-performing models, and better understand the cognitive aspects of human-AI interaction. As AI systems become more integrated into our lives, the demand for transparent and understandable AI will only grow.</p>
+            </section>
+
+            <section>
+                <h2>Further Learning</h2>
+                <p>To learn more about AI interpretability, consider these resources:</p>
+                <ul>
+                    <li><a href="fundamentals">AI Safety Fundamentals</a></li>
+                    <li><a href="alignment-challenges">The Alignment Problem</a></li>
+                    <li><a href="../resources/glossary">AI Safety Glossary</a></li>
+                    <li><a href="https://distill.pub/2018/building-blocks/">The Building Blocks of Interpretability (Distill.pub)</a></li>
+                    <li><a href="../resources/intermediate-reading">Intermediate Reading List</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Safety Foundations. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../pages/about">About</a>
+                <a href="../pages/learn">Learn</a>
+                <a href="../pages/resources">Resources</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
